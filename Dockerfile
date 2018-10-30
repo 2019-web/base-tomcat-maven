@@ -4,7 +4,7 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 ENV TOMCAT_VERSION 8.5.34
-ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat- $TOMCAT_VERSION.tar.gz
+ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 RUN set -x \
 && curl -fSL "$TOMCAT_TGZ_URL" -o tomcat.tar.gz \
 && tar -xvf tomcat.tar.gz --strip-components=1 \
